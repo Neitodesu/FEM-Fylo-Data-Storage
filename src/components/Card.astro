@@ -1,0 +1,48 @@
+---
+
+---
+
+<div class="container">
+	<img class="main-logo" src="logo.svg" alt="Fylo logo">
+	<div class="icons">
+		<img src="icon-document.svg" alt="document">
+		<img src="icon-folder.svg" alt="folder">
+		<img src="icon-upload.svg" alt="cloud">
+	</div>
+</div>
+
+<style lang="scss">
+	.container{
+		min-width: 330px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		padding-left: 2em;
+		gap: 2em;
+		justify-content: center;
+		background-color: var(--darkBlue);
+		border-radius: .75em 6em .75em .75em;
+
+		.main-logo{
+			max-width: 45%;
+		}
+
+		.icons{
+			display: flex;
+			gap: 1em;
+
+			img{
+				width: 15%;
+				background-color: var(--veryDarkBlue);
+				padding: .75em;
+				border-radius: .5em;
+
+				&:hover{
+					cursor: pointer;
+					opacity: .6;
+				}
+			}
+		}
+	}
+</style>

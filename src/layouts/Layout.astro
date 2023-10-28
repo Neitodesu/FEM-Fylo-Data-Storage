@@ -1,0 +1,76 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="shortcut icon" href="#" type="image/x-icon">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global lang="scss">
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	font-size: 100%;
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+ul,
+li {
+	list-style-type: none;
+	padding: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+:root{
+	--barGradient1: hsl(6, 100%, 80%);
+	--barGradient2: hsl(335, 100%, 65%);
+
+	--paleBlue: hsl(243, 100%, 93%);
+	--grayishBlue: hsl(229, 7%, 55%);
+	--darkBlue: hsl(228, 56%, 26%);
+	--veryDarkBlue: hsl(229, 57%, 11%);
+}
+
+</style>

@@ -1,0 +1,138 @@
+---
+---
+
+<div class="container">
+  <p class="para">You've used <span>815 GB</span> of your storage</p>
+  <div class="data-bar">
+    <div class="data-loaded">
+      <div class="data-dot"></div>
+    </div>
+  </div>
+  <div class="data-stats">
+    <p>0 GB</p>
+    <p>1000 GB</p>
+  </div>
+  <div class="data-left">
+    <p>185</p>
+    <span>GB LEFT</span>
+  </div>
+</div>
+
+<style lang="scss">
+  .container{
+    position: relative;
+    min-width: 330px;
+    background-color: var(--darkBlue);
+    border-radius: .5em;
+    height: 160px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+
+    @media screen and (min-width: 1200px){
+      min-width: 540px;
+      transform: translateY(20px);
+      padding-top: 2em;
+      gap: 1em;
+    }
+
+    .para{
+      width: 85%;
+      font-size: 1rem;
+      font-weight: 400;
+
+      span{
+        font-weight: 700;
+      }
+    }
+
+    .data-bar{
+      width: 85%;
+      height: 20px;
+      background-color: var(--veryDarkBlue);
+      border-radius: 5em;
+      border: inset 3px var(--veryDarkBlue);
+      overflow: hidden;
+
+      .data-loaded{
+        position: relative;
+        width: 80%;
+        height: 100%;
+        background: linear-gradient(to right, var(--barGradient1), var(--barGradient2));
+        border-radius: 5em;
+
+        .data-dot{
+          position: absolute;
+          right: 3px;
+          top: 0;
+          transform: translateY(20%);
+          height: 10px;
+          width: 10px;
+          background-color: #fff;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    .data-stats{
+      width: 85%;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      padding-bottom: 1em;
+
+      p{
+        font-size: .8rem;
+      }
+    }
+
+    .data-left{
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      gap: .5em;
+      align-items: center;
+      padding: 0em 2em;
+      border-radius: .75em;
+      transform: translateY(50%);
+      background-color: var(--paleBlue);
+      color: black;
+
+      &::after{
+
+        @media screen and (min-width: 1200px){
+        content: '';
+        height: 40px;
+        width: 40px;
+        background-color: var(--paleBlue);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+        clip-path: polygon(50% 0%, 50% 100%, 50% 100%, 0% 50%);
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        top: 0;
+        height: 80px;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+
+      p{
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      span{
+          width: 100%;
+          font-size: .7rem;
+          color: var(--grayishBlue);
+          font-weight: 400
+      }
+    }
+  }
+</style>
