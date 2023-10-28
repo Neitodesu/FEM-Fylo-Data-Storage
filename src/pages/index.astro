@@ -27,10 +27,7 @@ import Data from '../components/Data.astro';
 		gap: 1em;
 
 		@media screen and (min-width: 1200px) {
-			background: var(--veryDarkBlue) url(bg-desktop.png);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: bottom;
+			background: var(--veryDarkBlue) url(#{$assetPath}/bg-desktop.png) no-repeat bottom/ contain;
 			flex-direction: row;
 			gap: 2em;
 		}
