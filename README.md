@@ -4,7 +4,7 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
 
 ### LINK 👀
 
-[Preview Site](https://app.netlify.com/sites/bucolic-caramel-e9e17e/deploys/653d97e57e881a0008ce56c8)
+[Preview Site](https://main--bucolic-caramel-e9e17e.netlify.app/)
 
 ### Screenshot
 
